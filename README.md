@@ -1,2 +1,4 @@
 # Fine-Tune-LLM
-Fine Tune LLM
+This code snippet demonstrates the process of fine-tuning a language model using Hugging Face's Transformers library. It installs dependencies, loads a pre-trained model and tokenizer, prepares a dataset for training, fine-tunes the model, saves the trained model, pushes it to the Hugging Face model hub, and generates text using the finetuned model.
+The code loads the pre-trained Falcon model using the AutoModelForCausalLM.from_pretrained() method from the transformers module. It passes the MODEL_NAME, device_map="auto" to automatically map the model to available devices, trust_remote_code=True to trust remote code, and quantization_config=bnb_config to use the specified quantization configuration.
+The code prepares a dataset for fine-tuning by loading a CSV file using the load_dataset() function from the datasets module.
